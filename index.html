@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Coming Soon | Creative Studio</title>
+<title>Coming Soon | VectoPix</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Script:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -16,11 +18,8 @@
 }
 
 body{
-    height:100vh;
+    min-height:100vh;
     background:#0c0c1c;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     color:#fff;
     overflow:hidden;
 }
@@ -29,70 +28,68 @@ body{
 .circle{
     position:absolute;
     border-radius:50%;
-    filter:blur(80px);
+    filter:blur(90px);
     opacity:0.7;
     animation:pulse 6s infinite ease-in-out;
 }
 
 .pink{
-    width:340px;
-    height:340px;
+    width:360px;
+    height:360px;
     background:#ff4ecd;
-    top:15%;
-    left:10%;
+    top:10%;
+    left:8%;
 }
 
 .blue{
-    width:380px;
-    height:380px;
+    width:420px;
+    height:420px;
     background:#4ee1ff;
-    bottom:10%;
-    right:12%;
+    bottom:8%;
+    right:10%;
     animation-delay:3s;
 }
 
 @keyframes pulse{
-    0%{
-        transform:scale(1);
-        opacity:0.6;
-    }
-    50%{
-        transform:scale(1.15);
-        opacity:0.9;
-    }
-    100%{
-        transform:scale(1);
-        opacity:0.6;
-    }
+    0%{ transform:scale(1); opacity:0.6; }
+    50%{ transform:scale(1.15); opacity:0.9; }
+    100%{ transform:scale(1); opacity:0.6; }
 }
 
 /* ===== Content ===== */
 .container{
     position:relative;
     z-index:10;
-    max-width:800px;
-    padding:50px 25px;
+    max-width:900px;
+    margin:0 auto;
+    padding-top:40px;   /* controls top gap */
     text-align:center;
-    animation:fadeUp 1.4s ease;
 }
 
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
+/* LOGO — BIG & STEADY */
 .logo{
-    font-size:42px;
-    font-weight:700;
-    letter-spacing:3px;
+    margin-bottom:0;
 }
 
+.logo img{
+    max-width:280px;     /* BIG logo */
+    display:block;
+    margin:0 auto;
+}
+
+/* TAGLINE — NO GAP */
 .tagline{
-    margin:10px 0 35px;
-    font-size:18px;
-    opacity:0.85;
+     font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    margin-top:8px;
+    letter-spacing:5px;      /* THIS controls spacing */
+    /*word-spacing:10px;       /* THIS controls gap between words */
+    opacity:0.75;
+    
 }
 
+/* TITLE */
 .title{
     font-family:'Playfair Script', cursive;
     font-size:64px;
@@ -102,6 +99,7 @@ body{
     text-shadow:0 0 25px rgba(255,78,205,0.45);
 }
 
+/* DESCRIPTION */
 .description{
     font-size:18px;
     line-height:1.8;
@@ -109,7 +107,7 @@ body{
     margin-bottom:35px;
 }
 
-/* Services */
+/* SERVICES */
 .services span{
     display:inline-block;
     margin:8px;
@@ -117,18 +115,13 @@ body{
     border-radius:30px;
     border:1px solid rgba(255,255,255,0.25);
     font-size:14px;
-    transition:0.3s;
-}
-.services span:hover{
-    background:#fff;
-    color:#000;
-    transform:translateY(-3px);
 }
 
-/* Social Buttons */
+/* SOCIALS */
 .socials{
     margin-top:40px;
 }
+
 .socials a{
     display:inline-block;
     margin:10px;
@@ -138,44 +131,47 @@ body{
     font-weight:500;
     text-decoration:none;
     color:#fff;
-    transition:0.4s;
 }
 
 .instagram{
     background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
 }
+
 .behance{
     background:#1769ff;
 }
 
-.socials a:hover{
-    transform:scale(1.08);
-    box-shadow:0 15px 30px rgba(0,0,0,0.4);
-}
-
+/* FOOTER */
 .footer{
     margin-top:45px;
     font-size:14px;
     opacity:0.6;
 }
 
-/* Mobile */
+/* MOBILE */
 @media(max-width:600px){
-    .title{font-size:38px;}
-    .description{font-size:16px;}
+    .logo img{ max-width:200px; }
+    .title{ font-size:38px; }
+    .tagline{ font-size:16px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Animated background circles -->
+<!-- Background -->
 <div class="circle pink"></div>
 <div class="circle blue"></div>
 
 <div class="container">
-    <div class="logo">VectoPix</div>
-    <div class="tagline">Graphic Design • Branding • Visual Storytelling</div>
+
+    <div class="logo">
+        <img src="VPX-small-Y.svg" alt="VectoPix Logo">
+    </div>
+
+    <div class="tagline">
+        Design  |  Motion  |  Impact
+    </div>
 
     <div class="title">Launching Soon 🚀</div>
 
@@ -200,8 +196,9 @@ body{
     </div>
 
     <div class="footer">
-        © 2026 YOUR BRAND NAME · Designed with passion
+        © 2026 VectoPix · Designed with passion
     </div>
+
 </div>
 
 </body>
